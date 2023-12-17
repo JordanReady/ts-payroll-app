@@ -1,0 +1,10 @@
+.sheetContainer {
+  background-color: rgba(128, 128, 128, 0.466);
+  z-index: 999;
+}
+
+.logo {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+}

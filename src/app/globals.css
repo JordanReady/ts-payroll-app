@@ -2,10 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "FiggityFont";
+  src: url("../fonts/RubikDoodleTriangles-Regular.ttf") format("truetype");
+  /* You can add additional formats (e.g., woff, ttf) for cross-browser compatibility */
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary-color: #89c4d8;
+  --secondary-color: #bb5d2c;
+  --font-family: "FiggityFont", "sarif";
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,15 +22,16 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --primary-color: #89c4d8;
+    --secondary-color: #bb5d2c;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  height: 100dvh;
+  background-color: rgb(27, 33, 39);
+  color: white;
+  margin: 0; /* Reset default margin for the body */
+  backdrop-filter: blur(5px);
+  font-family: var(--font-family);
 }
